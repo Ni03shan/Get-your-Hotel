@@ -1,0 +1,301 @@
+.navbar{
+    background-color: white
+}
+body{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh ;
+  width:99%;
+}
+.container{
+    flex: 1;
+    min-width:99%;
+}
+.nav-link{
+    color: #222222;
+}
+.social{
+    position: sticky;
+    bottom: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: rgb(219, 214, 214);
+}
+.social-img{
+    text-decoration: none;
+}
+.row{
+    margin-top: 10px;
+    display: flex;
+    justify-content:center;
+    margin: 0%;
+}
+.card{
+    margin:0px 0px 25px 25px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-decoration: none !important;
+
+}
+.card-img-top{
+    padding: 1%;
+    object-fit: cover;
+    border-radius: 5%;
+    margin-top:2%;
+    opacity: 1;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+.card-text{
+    position: relative;
+    bottom: 7%;
+    right: 4%;
+}
+.card-body, .card-body p{
+    margin-bottom: 0%;
+}
+.all_listing{
+    margin-top: 2%;
+    padding-left: 2%;
+    margin-bottom: 2%;
+}
+.show_listing{
+    text-decoration: none !important;
+    color: #222222;
+}
+.add-btn{
+    background-color: rgb(242, 41, 41);
+    width: 4rem;
+    height: 2rem;
+    border: none;
+    border-radius: 9% !important;
+    color: whitesmoke;
+    font-weight: 3rem !important;
+    margin-left: 3%;
+}
+.form-label{
+    font-size: 1.2rem !important;
+    font-weight: 480;
+}
+.row-new{
+    margin-top: 2% !important;
+    height: 590px;
+}
+.row-edit{
+    height: 590px;
+}
+.fa-compass{
+    font-size: 25px;
+    color: rgb(245, 41, 41);
+}
+
+.show-img{
+    height: 15rem;
+    width: 25rem;
+    border-radius: 4%;
+}
+.show-div{
+    width: 400px;
+    line-height: 1.1;
+     display: flex;
+    flex-direction: column;
+}
+.show-button{
+    display: flex;
+    gap: 1.4rem;
+}
+.edit-btn{
+    width: 4rem;
+    height: 2rem;
+    border: none;
+    background-color: rgb(241, 37, 37);
+    color: white;
+    border-radius: 8%;
+    &:hover{
+        opacity: 0.6;
+    }
+}
+.delete-btn{
+    width: 4rem;
+    height: 2rem;
+    border: none;
+    background-color: rgb(23, 14, 14);
+    color: white;
+    border-radius: 8%;
+     &:hover{
+        opacity: 0.6;
+    }
+}
+.form-control{
+    width: 20rem !important;
+}
+.signin{
+    display: flex;
+    min-width: 140px;
+    justify-content: space-around;
+}
+.signin a{
+    background-color: rgb(241, 37, 37);
+    padding: 4px 10px 4px 10px;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-size: 15px;
+    &:hover{
+     opacity: 0.7;
+     transform: scale(0.9);
+    }
+}
+ @media (min-width: 768px) {
+      .signin {
+        position: absolute;
+        left: 87%;
+        bottom: 20%;
+      }
+    }
+
+.card {
+  --background: #e4b1b1;
+  --cardShadow: rgba(32,33,37,.1);
+  --cardShadowHover: rgba(32,33,37,.06);
+  --cardShadowActive: rgba(32,33,37,.55);
+  --cardBorder: #dbdce0;
+  --cardBorderActive: #1a73e8;
+  --textColor: #202125;
+  --linkColor: #1967d2;
+  --ratingColor: #faab00;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    --background: #828486;
+    --cardShadow: rgba(0,0,0,.28);
+    --cardShadowHover: rgba(0,0,0,.16);
+    --cardShadowActive: rgba(0,0,0,.55);
+    --cardBorder: #202125;
+    --cardBorderActive: #8ab4f8;
+    --textColor: #e9eaee;
+    --linkColor: #8ab4f8;
+  }
+}
+
+.card {
+  
+  width: 300px;
+  height: 100px;
+  background: var(--background);
+  color: var(--textColor);
+  border: 1px solid var(--cardBorder);
+  padding: 10px;
+  box-shadow: 8px 8px 0 var(--cardShadow);
+  transition: box-shadow .5s, transform .5s;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: translate(-2px, -4px);
+  box-shadow: 16px 16px 0 var(--cardShadowHover);
+}
+
+.card:active {
+  transform: translate(-2px, -4px);
+  border: 2px solid var(--cardBorderActive);
+  box-shadow: 4px 4px 0 var(--cardShadowActive);
+}
+
+.card > .icon,
+.card > .title,
+.card > .description {
+  margin-bottom: 0.2em;
+  cursor: default;
+  user-select: none;
+}
+
+.card > .title {
+  position: relative;
+  right: 25%;  
+  margin-top: 0.2em;
+  font-weight: bold;
+  
+}
+
+.card > .description {
+    position: relative;
+  right: 25%;
+  line-height: 1.2em;
+  min-height: 3em;
+}
+
+.card > .rating {
+  position: relative;
+  left:40%;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--ratingColor);
+  font-weight: bold;
+  position: relative;
+  width: max-content;
+}
+
+.card > .rating:before {
+  content: "☆";
+}
+
+.card > .rating:after {
+  content: "★";
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  width: calc(var(--rating) * 1%);
+  overflow: hidden;
+}
+
+.card > .link {
+  margin-bottom: 1rem;
+  color: var(--linkColor);
+  font-size: .8em;
+  font-weight: 600;
+}
+
+.card > .link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card > .link:after {
+  content: "↗";
+  display: inline-block;
+  margin-left: .3em;
+  transition: transform .3s ease-in-out;
+}
+
+.card:hover > .link:after {
+  transform: translate(.2em, -.2em);
+}
+.main-class {
+    display: flex;
+    width: 120%;
+    flex-direction: row-reverse;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 0.6rem;
+}
+
+.main-class > * {
+    flex-shrink: 0; /* prevent shrinking */
+}
+.Feedback{
+    font-size: 18px;
+    font-weight: 600;
+}

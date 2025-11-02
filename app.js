@@ -20,12 +20,16 @@ const Review = require("./models/review.js");
 const userRouter=require("./routes/user.js")
 const {islogedin}=require("./middleware.js")
 
-main().then(()=>console.log("connected !")).catch((err)=>{
-    console.log(err)
-})
-async function main(){
-    await mongoose.connect(process.env.MONGO_URL)
+async function main() {
+  try {
+    await mongoose.connect(process.env.MONGO_URL);
+    console.log(" MongoDB Connected Successfully!");
+  } catch (err) {
+    console.error(" MongoDB Connection Error:", err);
+  }
 }
+main();
+
 
 app.set("views",path.join(__dirname,"views"))
 app.set("view engine","ejs")
@@ -79,7 +83,9 @@ app.post("/listings/:id/review",islogedin,async(req,res)=>{
 })
 
 
-app.listen(4000,()=>{
-    console.log("ok!")
-})
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
+
 

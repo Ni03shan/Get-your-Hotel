@@ -20,6 +20,13 @@ const Review = require("./models/review.js");
 const userRouter=require("./routes/user.js")
 const {islogedin}=require("./middleware.js")
 
+main().then(()=>console.log("connected !")).catch((err)=>{
+    console.log(err)
+})
+async function main(){
+    await mongoose.connect(process.env.MONGO_URL)
+}
+
 app.set("views",path.join(__dirname,"views"))
 app.set("view engine","ejs")
 app.use(express.urlencoded({ extended: true }));
@@ -71,12 +78,7 @@ app.post("/listings/:id/review",islogedin,async(req,res)=>{
 
 })
 
-main().then(()=>console.log("connected !")).catch((err)=>{
-    console.log(err)
-})
-async function main(){
-    await mongoose.connect(process.env.MONGO_URL)
-}
+
 app.listen(4000,()=>{
     console.log("ok!")
 })

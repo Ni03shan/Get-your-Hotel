@@ -28,8 +28,6 @@ app.engine('ejs',ejsMate)
 app.use(express.static(path.join(__dirname,'public')));
 
 
-
-
 app.use(expressSession({secret:"secretid",resave:false,saveUninitialized:true,cookie:{
     expires:Date.now()+7*24*60*60*1000,
     maxAge:7*24*60*60*1000,
@@ -73,13 +71,13 @@ app.post("/listings/:id/review",islogedin,async(req,res)=>{
 
 })
 
-app.listen(4000,()=>{
-    console.log("ok!")
-})
-
 main().then(()=>console.log("connected !")).catch((err)=>{
     console.log(err)
 })
 async function main(){
-    await mongoose.connect('mongodb://127.0.0.1:27017/airbnb')
+    await mongoose.connect(process.env.MONGO_URL)
 }
+app.listen(4000,()=>{
+    console.log("ok!")
+})
+

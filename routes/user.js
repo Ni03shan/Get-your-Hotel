@@ -6,7 +6,7 @@ const { route } = require("./listings.js");
 
 //signup form
 router.get("/signup", (req, res) => {
-  res.render("./users/signup.ejs");
+  res.render("user/signup");
 });
 
 router.post("/signup", async (req, res) => {

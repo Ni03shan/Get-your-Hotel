@@ -161,6 +161,9 @@ body{
         left: 82%;
         bottom: 20%;
       }
+      .form-control{
+      width: 39rem !important;
+    }
     }
   @media(max-width:768px){
     .show-div{

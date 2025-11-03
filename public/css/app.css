@@ -158,7 +158,7 @@ body{
  @media (min-width: 768px) {
       .signin {
         position: absolute;
-        left: 82%;
+        left: 87%;
         bottom: 20%;
       }
       .form-control{

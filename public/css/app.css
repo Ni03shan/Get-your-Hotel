@@ -17,6 +17,7 @@ body{
 }
 .nav-link{
     color: #222222;
+    font-weight: 600;
 }
 .social{
     position: sticky;
@@ -26,6 +27,7 @@ body{
     align-items: center;
     height: 40px;
     background-color: rgb(219, 214, 214);
+    width: 103%;
 }
 .social-img{
     text-decoration: none;
@@ -156,10 +158,22 @@ body{
  @media (min-width: 768px) {
       .signin {
         position: absolute;
-        left: 87%;
+        left: 82%;
         bottom: 20%;
       }
     }
+  @media(max-width:768px){
+    .show-div{
+      width: 100%;
+    }
+    .show-img{
+      width: 290px;
+      height: 200px;
+    }
+    .form-control{
+      width: 17rem !important;
+    }
+  }  
 
 .card {
   --background: #e4b1b1;
@@ -293,7 +307,7 @@ body{
 }
 
 .main-class > * {
-    flex-shrink: 0; /* prevent shrinking */
+    flex-shrink: 0; 
 }
 .Feedback{
     font-size: 18px;

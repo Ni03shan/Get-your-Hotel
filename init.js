@@ -1,4 +1,4 @@
-const mongoose=require("mongoose");
+const mongoose = require("mongoose");
 const Listing = require("./models/listing");
 
 const sampleListings = [
@@ -352,24 +352,26 @@ const sampleListings = [
   },
 ];
 
-main().then(()=>console.log("connected !")).catch((err)=>{
-  console.log(err)
-})
-async function main(){
-  await mongoose.connect('mongodb://127.0.0.1:27017/airbnb')
+main()
+  .then(() => console.log("connected !"))
+  .catch((err) => {
+    console.log(err);
+  });
+async function main() {
+  await mongoose.connect("mongodb://127.0.0.1:27017/airbnb");
 }
 
 async function intdb() {
-  await Listing.deleteMany({})
+  await Listing.deleteMany({});
 
-  const listingsWithOwner = sampleListings.map(obj => ({
+  const listingsWithOwner = sampleListings.map((obj) => ({
     ...obj,
-    owner: "68f4a373b2ed0a34bb28ad0b"
-  }))
+    owner: "68f4a373b2ed0a34bb28ad0b",
+  }));
 
-  await Listing.insertMany(listingsWithOwner)
+  await Listing.insertMany(listingsWithOwner);
 
-  console.log("Database seeded successfully!")
+  console.log("Database seeded successfully!");
 }
 
-intdb()
+intdb();
